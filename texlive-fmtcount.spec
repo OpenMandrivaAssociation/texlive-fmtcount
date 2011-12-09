@@ -1,12 +1,12 @@
-# revision 15878
+# revision 24750
 # category Package
 # catalog-ctan /macros/latex/contrib/fmtcount
-# catalog-date 2009-10-02 20:24:27 +0200
+# catalog-date 2011-11-07 10:42:11 +0100
 # catalog-license lppl1.3
 # catalog-version 1.31
 Name:		texlive-fmtcount
 Version:	1.31
-Release:	1
+Release:	2
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 The package fmtcount.sty provides commands that display the
@@ -33,19 +30,19 @@ originally provided as part of the author's datetime package,
 but is now distributed separately.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
