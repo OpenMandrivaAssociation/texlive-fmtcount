@@ -29,16 +29,8 @@ Portuguese and Spanish documents are provided. This package was
 originally provided as part of the author's datetime package,
 but is now distributed separately.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -67,7 +59,6 @@ but is now distributed separately.
 %doc %{_texmfdistdir}/source/latex/fmtcount/fmtcount.dtx
 %doc %{_texmfdistdir}/source/latex/fmtcount/fmtcount.ins
 %doc %{_texmfdistdir}/source/latex/fmtcount/fmtcount.perl
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -78,5 +69,3 @@ but is now distributed separately.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
