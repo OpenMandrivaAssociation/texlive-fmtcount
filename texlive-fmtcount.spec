@@ -6,7 +6,7 @@
 # catalog-version 2.02
 Name:		texlive-fmtcount
 Version:	2.02
-Release:	5
+Release:	6
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
