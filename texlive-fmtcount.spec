@@ -1,12 +1,6 @@
-# revision 31456
-# category Package
-# catalog-ctan /macros/latex/contrib/fmtcount
-# catalog-date 2012-11-17 10:29:25 +0100
-# catalog-license lppl1.3
-# catalog-version 2.02
 Name:		texlive-fmtcount
-Version:	2.02
-Release:	9
+Version:	3.05
+Release:	1
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
@@ -40,34 +34,11 @@ separately.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/scripts/fmtcount/fmtcount.perl
-%{_texmfdistdir}/tex/latex/fmtcount/fc-UKenglish.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-USenglish.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-american.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-british.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-english.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-francais.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-french.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-frenchb.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-german.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-germanb.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-italian.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-ngerman.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-ngermanb.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-portuges.def
-%{_texmfdistdir}/tex/latex/fmtcount/fc-spanish.def
-%{_texmfdistdir}/tex/latex/fmtcount/fcnumparser.sty
-%{_texmfdistdir}/tex/latex/fmtcount/fcprefix.sty
-%{_texmfdistdir}/tex/latex/fmtcount/fmtcount.sty
-%doc %{_texmfdistdir}/doc/latex/fmtcount/CHANGES
-%doc %{_texmfdistdir}/doc/latex/fmtcount/README
-%doc %{_texmfdistdir}/doc/latex/fmtcount/fc-frlargenum.tex
-%doc %{_texmfdistdir}/doc/latex/fmtcount/fc-lang.tex
-%doc %{_texmfdistdir}/doc/latex/fmtcount/fc-samp.tex
-%doc %{_texmfdistdir}/doc/latex/fmtcount/fmtcount.pdf
+%{_texmfdistdir}/scripts/fmtcount
+%{_texmfdistdir}/tex/latex/fmtcount
+%doc %{_texmfdistdir}/doc/latex/fmtcount
 #- source
-%doc %{_texmfdistdir}/source/latex/fmtcount/fmtcount.dtx
-%doc %{_texmfdistdir}/source/latex/fmtcount/fmtcount.ins
+%doc %{_texmfdistdir}/source/latex/fmtcount
 
 #-----------------------------------------------------------------------
 %prep
