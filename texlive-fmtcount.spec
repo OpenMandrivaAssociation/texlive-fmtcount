@@ -1,6 +1,6 @@
 Name:		texlive-fmtcount
 Version:	3.05
-Release:	2
+Release:	3
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
