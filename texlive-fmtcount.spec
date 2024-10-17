@@ -3,7 +3,7 @@ Version:	72151
 Release:	1
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.doc.r%{version}.tar.xz
