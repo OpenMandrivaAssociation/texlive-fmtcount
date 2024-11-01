@@ -1,5 +1,5 @@
 Name:		texlive-fmtcount
-Version:	72151
+Version:	72583
 Release:	1
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
