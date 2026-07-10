@@ -1,52 +1,30 @@
-Name:		texlive-fmtcount
-Version:	73812
-Release:	1
+%global tl_name fmtcount
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	3.12
+Release:	%{tl_revision}.1
 Summary:	Display the value of a LaTeX counter in a variety of formats
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fmtcount
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/fmtcount.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides commands that display the value of a LaTeX
-counter in a variety of formats (ordinal, text, hexadecimal,
-decimal, octal, binary etc). The package offers some
-multilingual support; configurations for use in English (both
-British and American usage), French (including Belgian and
-Swiss variants), German, Italian, Portuguese and Spanish
-documents are provided. This package was originally provided as
-part of the author's datetime package, but is now distributed
-separately.
+The package provides commands that display the value of a LaTeX counter
+in a variety of formats (ordinal, text, hexadecimal, decimal, octal,
+binary etc). The package offers some multilingual support;
+configurations for use in English (both British and American usage),
+French (including Belgian and Swiss variants), German, Italian,
+Portuguese and Spanish documents are provided. This package was
+originally provided as part of the author's datetime package, but is now
+distributed separately.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/scripts/fmtcount
-%{_texmfdistdir}/tex/latex/fmtcount
-%doc %{_texmfdistdir}/doc/latex/fmtcount
-#- source
-%doc %{_texmfdistdir}/source/latex/fmtcount
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar scripts tex doc source %{buildroot}%{_texmfdistdir}
